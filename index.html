@@ -5,35 +5,135 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nicolas Almeida | Portfólio</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #222;
+    :root {
+      --fundo: #0d1117;
+      --cartao: #161b22;
+      --borda: #30363d;
+      --texto: #e6edf3;
+      --texto-suave: #9da7b3;
+      --destaque: #4f9cf9;
     }
-    h1 { margin-bottom: 0; }
-    h2 { margin-top: 40px; }
-    a { color: #0b66c3; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--fundo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+    header, main, footer {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    header { padding-top: 70px; padding-bottom: 30px; }
+    header h1 { font-size: 2.6rem; margin: 0; }
+    header p { color: var(--texto-suave); font-size: 1.15rem; margin: 8px 0 0; }
+    .destaque { color: var(--destaque); }
+    section { margin-top: 50px; }
+    h2 {
+      font-size: 1.5rem;
+      border-bottom: 1px solid var(--borda);
+      padding-bottom: 8px;
+    }
+    .cartoes { display: grid; gap: 16px; }
+    .cartao {
+      background: var(--cartao);
+      border: 1px solid var(--borda);
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .cartao h3 { margin: 0 0 6px; }
+    .cartao p { color: var(--texto-suave); margin: 0 0 12px; }
+    .tags span {
+      display: inline-block;
+      background: #1f2a3a;
+      color: var(--destaque);
+      border-radius: 20px;
+      padding: 2px 12px;
+      font-size: 0.85rem;
+      margin: 0 6px 6px 0;
+    }
+    a { color: var(--destaque); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .botao {
+      display: inline-block;
+      background: var(--destaque);
+      color: #0d1117;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 16px;
+    }
+    .botao:hover { text-decoration: none; opacity: 0.9; }
+    footer {
+      margin-top: 60px;
+      padding-bottom: 40px;
+      color: var(--texto-suave);
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
-  <h1>Nicolas Almeida</h1>
-  <p>Estudante de Ciência da Computação | Desenvolvimento Web</p>
 
-  <h2>Sobre mim</h2>
-  <p>
-    Sou estudante de Ciência da Computação, estou aprendendo Python, HTML, CSS
-    e JavaScript e busco meu primeiro estágio em desenvolvimento web.
-  </p>
+  <header>
+    <h1>Olá, eu sou o <span class="destaque">Nicolas</span> 👋</h1>
+    <p>Estudante de Ciência da Computação | Desenvolvimento Web</p>
+    <a class="botao" href="#contato">Entre em contato</a>
+  </header>
 
-  <h2>Projetos</h2>
-  <p>Em breve, meus projetos vão aparecer aqui.</p>
+  <main>
+    <section>
+      <h2>Sobre mim</h2>
+      <p>
+        Sou estudante de Ciência da Computação e estou aprendendo a criar
+        sites e programas. Estudo Python, HTML, CSS e JavaScript, e busco meu
+        primeiro estágio em desenvolvimento web para aprender na prática e
+        crescer na área.
+      </p>
+    </section>
 
-  <h2>Contato</h2>
-  <p>
-    <a href="https://github.com/onicoalmeida">GitHub</a>
-  </p>
+    <section>
+      <h2>Habilidades</h2>
+      <div class="tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Python</span>
+        <span>Git e GitHub</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projetos</h2>
+      <div class="cartoes">
+        <div class="cartao">
+          <h3>Lista de Tarefas</h3>
+          <p>Aplicativo para adicionar, concluir e apagar tarefas, que guarda tudo no navegador.</p>
+          <div class="tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+          <a href="todo-list/">Ver projeto →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>
+        <a href="https://github.com/onicoalmeida">GitHub</a>
+        <!-- Quando tiver o link do LinkedIn, apague as setas desta linha e a de baixo e ajuste o link:
+        · <a href="COLE-AQUI-O-LINK-DO-SEU-LINKEDIN">LinkedIn</a>
+        -->
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Nicolas Almeida</p>
+  </footer>
+
 </body>
 </html>
